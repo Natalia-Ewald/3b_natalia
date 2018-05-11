@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -39,5 +40,7 @@ public class AlunoController implements Initializable {
 
     @FXML
     private void fechar(ActionEvent event) {
+        Stage stage = (Stage) txtNome.getScene().getWindow();
+    stage.close();
     }
 }
